@@ -1,0 +1,21 @@
+{
+  "name": "write",
+  "version": "0.0.0",
+  "description": "just write in your browser !",
+  "main": "write.js",
+  "dependencies": {
+    "cookie": "~0.1.0",
+    "connect": "~2.10.1",
+    "express": "~3.4.3",
+    "googlediff": "~0.1.0",
+    "socket.io": "~0.9.16",
+	 "jade": "~1.5.0",
+	 "forever": "~0.11.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ejerhar",
+  "license": "BSD-2-Clause"
+}

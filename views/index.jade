@@ -1,0 +1,32 @@
+html
+	head
+		title node writing app
+		script(src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js")
+		script(src="/socket.io/socket.io.js")
+		script(src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js")
+		script(src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js")
+		script(src="http://xx.xx.xx.xx:8082/diff.js")
+		script(src="http://xx.xx.xx.xx:8082/sisyphus.min.js")
+		
+		script.
+			if(Modernizr.localstorage){
+				$.getScript("http://142.133.148.250:8082/app.js").done(function( script, textStatus ) {
+					console.log( "loaded "+textStatus );
+					$('.foo').show() ;
+				}).fail(function( jqxhr, settings, exception ) {
+					$('#notice').html( "uh-oh, bad monkey !" );
+					console.log("problem "+exception) ;
+				});
+			}
+			else{
+				$('#notice').html("Oh noes, this can't work here :(") ;
+			}
+	body
+		noscript
+			p Oh noes, this cannot work here :(
+		.foo(style='display:none')
+			#connect
+			#notice
+			form(action='/save', method='post', id='form', name='form')
+				textarea(id='data', rows='10', cols='50', name='text')
+				input(type='submit', name='submit', id='datasend', value='Submit')
