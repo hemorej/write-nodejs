@@ -8,6 +8,7 @@ todo:
 	- use sessions instead of socket ID to resume work after reconnect
 - detect if some js resources didn't load
 - break into proper modules
+- save to dropbox button
 
 
 links:
